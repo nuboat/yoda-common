@@ -5,12 +5,12 @@ sonatypeProfileName := "in.norbor"
 publishMavenStyle := true
 
 // License of your choice
-licenses := Seq("MIT" -> url("https://raw.githubusercontent.com/nuboat/yoda-ommon/master/LICENSE"))
-homepage := Some(url("https://github.com/nuboat/yoda-ommon"))
+licenses := Seq("MIT" -> url("https://raw.githubusercontent.com/nuboat/yoda-common/master/LICENSE"))
+homepage := Some(url("https://github.com/nuboat/yoda-common"))
 scmInfo := Some(
   ScmInfo(
     url("https://github.com/nuboat/yoda-common"),
-    "scm:git@github.com:nuboat/yoda-ommon.git"
+    "scm:git@github.com:nuboat/yoda-common.git"
   )
 )
 developers := List(
