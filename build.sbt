@@ -2,13 +2,15 @@ organization := "in.norbor"
 
 name := "yoda-common"
 
-version := "0.0.1"
+version := "0.1.0"
 
 scalaVersion := "2.13.0"
 
 updateOptions := updateOptions.value.withGigahorse(false)
 
 scalacOptions := Seq("-feature", "-deprecation", "-unchecked", "-Xlint")
+
+javacOptions ++= Seq("-source", "1.8", "-target", "1.8", "-encoding", "UTF-8", "-g:none")
 
 libraryDependencies ++= Seq(
   "com.fasterxml.jackson.module" %% "jackson-module-scala" % "2.9.9" % "compile"
