@@ -2,8 +2,12 @@ YODA - Common
 ==========
 Wrapper & Common Class
  
-```Publish Command
+```Publish Local
 sbt publishM2
+```
+
+
+```Publish Central Repo
 sbt publishSigned
 sbt sonatypeRelease
 ```
