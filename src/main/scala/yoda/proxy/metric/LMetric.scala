@@ -1,4 +1,4 @@
-package yoda.traits.metric
+package yoda.proxy.metric
 
 /**
   * @author Peerapat A on April 13, 2018

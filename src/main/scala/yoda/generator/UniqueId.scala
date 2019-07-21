@@ -6,7 +6,10 @@ package yoda.generator
 
 import java.util.UUID
 
-case class UniqueId(i: UUID, uuid: UUID) {
+/**
+  * @author Peerapat A
+  */
+private[generator] case class UniqueId(i: UUID, uuid: UUID) {
 
   val creator: String = trim(i)
 

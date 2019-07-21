@@ -43,9 +43,9 @@ class UuidService @Inject()(system: ActorSystem) extends LazyLogging {
   def create(i: UUID): Unit = stack.push(UniqueId(i, UUID.randomUUID))
 
   private def random: UniqueId = try {
-    val uniqueId = stack.pop
-    actor ! (this, uniqueId)
-    uniqueId
+    val message = Message(service = this, creator = stack.pop)
+    actor ! message
+    message.creator
   } catch {
     case _: NoSuchElementException =>
       logger.warn("UUID SERVICES PEAK LOAD")

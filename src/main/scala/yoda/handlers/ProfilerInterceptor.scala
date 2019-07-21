@@ -6,7 +6,7 @@ package yoda.handlers
 
 import javax.inject.Inject
 import org.aopalliance.intercept.{MethodInterceptor, MethodInvocation}
-import yoda.traits.metric.LMetric
+import yoda.proxy.metric.LMetric
 
 /**
   * @author Peerapat A on Mar 18, 2017

@@ -2,7 +2,7 @@
  * Copyright (C) 2019 Peerapat Asoktummarungsri
  */
 
-package yoda.models
+package yoda.rest
 
 /**
   * @author Peerapat A on Jul 13, 2018

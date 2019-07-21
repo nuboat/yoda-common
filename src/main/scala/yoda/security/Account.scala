@@ -2,7 +2,7 @@
  * Copyright (C) 2019 Peerapat Asoktummarungsri
  */
 
-package yoda.traits.security
+package yoda.security
 
 /**
   *

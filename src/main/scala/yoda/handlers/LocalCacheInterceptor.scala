@@ -7,7 +7,7 @@ package yoda.handlers
 import com.typesafe.scalalogging.LazyLogging
 import javax.inject.Inject
 import org.aopalliance.intercept.{MethodInterceptor, MethodInvocation}
-import yoda.traits.cache.LCache
+import yoda.proxy.cache.LCache
 
 import scala.concurrent.duration._
 import scala.language.postfixOps

@@ -2,12 +2,13 @@
  * Copyright (C) 2019 Peerapat Asoktummarungsri
  */
 
-package yoda.traits.security
+package yoda.definitions
 
 /**
   * @author Peerapat A On Dec 7, 2018
   */
-object Method extends Enumeration {
+object RestMethod extends Enumeration {
+
   type Method = Value
 
   val OPTION: Value = Value(0)

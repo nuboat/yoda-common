@@ -5,11 +5,12 @@
 package yoda.definitions
 
 /**
-  * 0 - 100 is for standard response code, for any speicific code please start at 1000
+  * <p>
+  * 0 - 999 is for standard response code, for any speicific code please start at 1000
   *
   * @author Peerapat A on Jul 11, 2018
   */
-object ResponseCode extends Enumeration {
+object RestResponse extends Enumeration {
 
   val Success: Value = Value(0, "Success")
 
@@ -19,6 +20,8 @@ object ResponseCode extends Enumeration {
 
   val InvalidRequest: Value = Value(103, "Invalid Request Message")
 
-  val UnknowError: Value = Value(100, "Unknown Error")
+  val NoAuthorized: Value = Value(104, "Invalid Request Message")
+
+  val UnknowError: Value = Value(109, "Unknown Error")
 
 }

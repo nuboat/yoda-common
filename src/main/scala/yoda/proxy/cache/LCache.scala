@@ -2,7 +2,7 @@
  * Copyright (C) 2019 Peerapat Asoktummarungsri
  */
 
-package yoda.traits.cache
+package yoda.proxy.cache
 
 import scala.concurrent.duration.Duration
 

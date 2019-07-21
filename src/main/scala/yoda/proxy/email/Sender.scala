@@ -2,7 +2,7 @@
  * Copyright (C) 2019 Peerapat Asoktummarungsri
  */
 
-package yoda.traits.email
+package yoda.proxy.email
 
 /**
   * @author Peerapat A on Aug 23, 2018
