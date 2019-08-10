@@ -13,8 +13,7 @@ trait AuthorizationManager {
 
   def lookupAccount(access: Option[AuthenticationToken]): Option[Account]
 
-  def hasAccess(permission: Permission
-                , role: Access.Roles
+  def hasAccess(permission: RestPermission
                 , account: Option[Account]): Boolean
 
 }

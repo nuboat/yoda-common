@@ -9,4 +9,4 @@ import yoda.definitions.RestMethod.Method
 /**
   * @author Peerapat A On Dec 7, 2018
   */
-case class Permission(method: Method, action: String)
+case class RestPermission(method: Method, action: String)
