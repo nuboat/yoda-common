@@ -6,10 +6,9 @@ package yoda.commons
 
 import java.security.SecureRandom
 import java.security.cert.X509Certificate
-
 import javax.net.ssl._
 
-object SSLCertificate {
+trait SSLCertificate {
 
   def trustAllCert(): Unit = {
 

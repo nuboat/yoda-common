@@ -15,9 +15,9 @@ javacOptions ++= Seq("-source", "1.8", "-target", "1.8", "-encoding", "UTF-8")
 libraryDependencies ++= Seq(
   "com.fasterxml.jackson.module" %% "jackson-module-scala" % "2.12.1" % Compile
   , "com.typesafe" % "config" % "1.4.1" % Compile
-  , "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2" % Compile
   , "joda-time" % "joda-time" % "2.10.5" % Compile
   , "org.mindrot" % "jbcrypt" % "0.4" % Compile
+  , "org.scala-lang" % "scala-reflect" % scalaVersion.value
 )
 
 libraryDependencies ++= Seq(

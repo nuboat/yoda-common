@@ -3,8 +3,6 @@ package yoda.commons
 import org.joda.time.DateTime
 import org.joda.time.format.DateTimeFormat
 
-import scala.util.Try
-
 trait DateUtil {
 
   private lazy val fmt = DateTimeFormat.forPattern("yyyyMMdd")
@@ -22,9 +20,18 @@ trait DateUtil {
     val isostr = iso.toString
 
     if (isostr.length != 8) throw new IllegalArgumentException(
+      s"Wrong ISO format : $iso, The expected format should be yyyyMMdd. (25640101) ")
+
+    ((iso / 10000 - 543) * 10000) + (iso % 10000)
+  }
+
+  def isoAD2BE(iso: Int): Int = {
+    val isostr = iso.toString
+
+    if (isostr.length != 8) throw new IllegalArgumentException(
       s"Wrong ISO format : $iso, The expected format should be yyyyMMdd. (20210101) ")
 
-    (isostr.substring(0, 4).toInt - 543)*10000 + isostr.substring(4).toInt
+    ((iso / 10000 + 543) * 10000) + (iso % 10000)
   }
 
 }

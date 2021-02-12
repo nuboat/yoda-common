@@ -5,9 +5,6 @@
 package yoda.commons
 
 import java.lang.reflect.Field
-
-import com.typesafe.scalalogging.LazyLogging
-
 import scala.reflect._
 
 /**
@@ -15,11 +12,11 @@ import scala.reflect._
   *
   * Created by Peerapat A on Mar 21, 2017
   */
-object MapToClass extends LazyLogging {
+trait MapToClass {
 
-  def apply[T](vals: Map[String, Any])(implicit cmf: ClassTag[T]): T = {
+  def mapToC[T](vals: Map[String, Any])(implicit cmf: ClassTag[T]): T = {
     val args = cmf.runtimeClass.getDeclaredFields
-      .map(f => lookup(vals, f) )
+      .map(f => lookup(vals, f))
 
     cmf.runtimeClass.getConstructors
       .head.newInstance(args: _*).asInstanceOf[T]
@@ -27,11 +24,8 @@ object MapToClass extends LazyLogging {
 
   def lookup(vals: Map[String, Any], f: Field): AnyRef = try {
     vals(f.getName).asInstanceOf[AnyRef]
-
   } catch {
-    case t: Throwable =>
-      logger.warn(t.getMessage)
-      null
+    case t: Throwable => null
   }
 
 }

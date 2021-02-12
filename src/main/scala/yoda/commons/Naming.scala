@@ -7,7 +7,7 @@ package yoda.commons
 /**
   * Created by Peerapat A on Apr 7, 2017
   */
-object Naming {
+trait Naming {
 
   /**
     * Takes a camel cased identifier name and returns an underscore separated

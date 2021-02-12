@@ -4,20 +4,18 @@
 
 package yoda.commons
 
-import com.typesafe.scalalogging.LazyLogging
-
 import scala.language.reflectiveCalls
 import scala.util.Try
 
 /**
   * Created by Peerapat A on Mar 18, 2017
   */
-trait Closer extends LazyLogging {
+trait Closer {
 
   def closer[T <: {def close(): Unit}, R](resource: T)(block: T => R): R = try {
     block(resource)
   } finally {
-    Try(resource.close()).failed foreach { t => logger.warn(t.getMessage)}
+    Try(resource.close()).failed foreach { t => println(s"[WARN] ${t.getMessage}")}
   }
 
 }

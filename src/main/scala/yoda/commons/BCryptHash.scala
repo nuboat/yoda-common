@@ -9,7 +9,7 @@ import org.mindrot.jbcrypt.BCrypt
 /**
   * Created by Peerapat A on May 11, 2017
   */
-object BCryptHash {
+trait BCryptHash {
 
   def digest(txt: String): String = txt match {
     case null | "" => throw new IllegalArgumentException("Text cannot Empty.")

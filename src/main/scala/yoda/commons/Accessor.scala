@@ -10,7 +10,7 @@ import scala.reflect.runtime.universe._
 /**
   * Created by Peerapat A on Mar 20, 2017
   */
-object Accessor {
+trait Accessor {
 
   def methods[T: TypeTag]: List[MethodSymbol] = {
     typeOf[T]

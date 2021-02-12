@@ -4,8 +4,6 @@
 
 package yoda.commons
 
-import com.typesafe.scalalogging.LazyLogging
-
 import scala.concurrent.duration._
 import scala.language.postfixOps
 import scala.util.{Failure, Success, Try}
@@ -13,24 +11,22 @@ import scala.util.{Failure, Success, Try}
 /**
   * Created by Peerapat A on June 4, 2017
   */
-object Retry extends LazyLogging {
+trait Retry {
 
   @annotation.tailrec
-  def apply[A](limit: Int, count: Int = 1, backoff: Duration = 5 seconds)(f: => A): A = Try(f) match {
-
+  final def retry[A](limit: Int
+                     , count: Int = 1
+                     , backoff: Duration = 5 seconds)(f: => A): A = Try(f) match {
     case Success(x) => x
 
     case Failure(e) =>
-      logger.warn(s"Failed $count / $limit times")
-      logger.error(e.getMessage, e)
+      println(s"[WARN] Failed $count / $limit times")
 
       if (count < limit) {
         Thread.sleep(backoff.toMillis)
-        Retry(limit = limit, count = count + 1, backoff = backoff) {
-          f
-        }
+        retry(limit, count + 1, backoff)(f)
       } else {
-        throw new IllegalStateException("Reached Limit Retry")
+        throw new RuntimeException(s"Reach Retry limit $count times", e)
       }
   }
 

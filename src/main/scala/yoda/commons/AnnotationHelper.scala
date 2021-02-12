@@ -13,7 +13,7 @@ import scala.reflect.runtime.universe._
   *
   * @author Peerapat A on April 21, 2018
   */
-object AnnotationHelper {
+trait AnnotationHelper {
 
   type AnnotationName = String
   type AnnotationField = String
