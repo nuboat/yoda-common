@@ -1,4 +1,8 @@
-package yoda.utilities
+/*
+ * Copyright (c) 2020. Peerapat Asoktummarungsri <https://www.linkedin.com/in/peerapat>
+ */
+
+package yoda.commons
 
 /**
   * Created by Peerapat A on Apr 7, 2017

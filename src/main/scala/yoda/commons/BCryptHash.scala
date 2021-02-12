@@ -1,8 +1,8 @@
 /*
- * Copyright (C) 2019 Peerapat Asoktummarungsri
+ * Copyright (c) 2020. Peerapat Asoktummarungsri <https://www.linkedin.com/in/peerapat>
  */
 
-package yoda.utilities
+package yoda.commons
 
 import org.mindrot.jbcrypt.BCrypt
 
@@ -11,7 +11,7 @@ import org.mindrot.jbcrypt.BCrypt
   */
 object BCryptHash {
 
-  def encrypt(txt: String): String = txt match {
+  def digest(txt: String): String = txt match {
     case null | "" => throw new IllegalArgumentException("Text cannot Empty.")
     case _ => BCrypt.hashpw(txt, BCrypt.gensalt())
   }

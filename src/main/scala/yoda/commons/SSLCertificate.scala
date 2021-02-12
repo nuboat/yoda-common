@@ -1,8 +1,8 @@
 /*
- * Copyright (C) 2019 Peerapat Asoktummarungsri
+ * Copyright (c) 2020. Peerapat Asoktummarungsri <https://www.linkedin.com/in/peerapat>
  */
 
-package yoda.utilities
+package yoda.commons
 
 import java.security.SecureRandom
 import java.security.cert.X509Certificate

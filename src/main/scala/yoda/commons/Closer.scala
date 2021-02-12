@@ -1,4 +1,8 @@
-package yoda.utilities
+/*
+ * Copyright (c) 2020. Peerapat Asoktummarungsri <https://www.linkedin.com/in/peerapat>
+ */
+
+package yoda.commons
 
 import com.typesafe.scalalogging.LazyLogging
 

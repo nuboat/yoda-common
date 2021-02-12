@@ -4,6 +4,7 @@ Wrapper & Common Class
  
 ```Publish Local
 sbt publishM2
+sbt publishLocal
 ```
 
 
@@ -12,10 +13,4 @@ sbt publishSigned
 sbt sonatypeRelease
 ```
 
-BTW, This project is completely opensource and feel free to PR
-
-
-
-
-
-Peerapat Asoktummarungsri @ COPYRIGHT 2019
+Copyright (C) 2021 Peerapat Asoktummarungsri <nb at beid.io>

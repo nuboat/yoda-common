@@ -1,8 +1,8 @@
 /*
- * Copyright (C) 2019 Peerapat Asoktummarungsri
+ * Copyright (C) 2020 Be ID Corporation Co., Ltd. <https://www.beid.io>
  */
 
-package yoda.utilities
+package yoda.commons
 
 import com.fasterxml.jackson.core.{JsonGenerator, JsonParser}
 import com.fasterxml.jackson.databind.module.SimpleModule
@@ -40,7 +40,7 @@ object JodaJacksonModule extends SimpleModule with ISODateTime {
     }
   }
 
-  private[utilities] def writeString(dt: DateTime, gen: JsonGenerator): Unit = {
+  private def writeString(dt: DateTime, gen: JsonGenerator): Unit = {
     gen.writeString(FORMATER_ISO_MILLIS_TZ.print(dt))
   }
 
