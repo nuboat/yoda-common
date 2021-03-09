@@ -1,6 +1,7 @@
 .sbtserver
 .sbtserver.lock
 .credential
+.bsp/
 
 velocity.log
 /node_modules

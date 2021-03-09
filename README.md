@@ -13,4 +13,4 @@ sbt publishSigned
 sbt sonatypeRelease
 ```
 
-Copyright (C) 2021 Peerapat Asoktummarungsri <nb at beid.io>
+Copyright (C) 2021 Peerapat Asoktummarungsri <https://www.linkedin.com/in/peerapat>
